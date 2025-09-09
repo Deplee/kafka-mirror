@@ -626,10 +626,6 @@ int kafka_mirror_create_single_producer(kafka_mirror_t *mirror, int producer_id)
 
     printf("Producer %d создан успешно\n", producer_id);
     
-    if (config->cross_cluster_mode) {
-        security_protocol_t security_protocol = config->target_security_protocol;
-        const char *security_protocol_str = (security_protocol == SECURITY_SASL_SSL) ? "sasl_ssl" : "sasl_plaintext";
-    }
     return 0;
 }
 
